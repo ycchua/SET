@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v7.0">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/lib/commons-logging-1.1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/lib/junit-3.8.1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/lib/log4j-1.2.13.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-codec-1.3.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/lucene-core-3.5.0.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/lucene-remote-3.5.0.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/pdfbox-app-1.7.0.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/poi-3.8-20120326.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/poi-examples-3.8-20120326.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/poi-excelant-3.8-20120326.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/poi-ooxml-3.8-20120326.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/poi-ooxml-schemas-3.8-20120326.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/poi-scratchpad-3.8-20120326.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Tidy.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/ooxml-lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/ooxml-lib/stax-api-1.0.1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/ooxml-lib/xmlbeans-2.3.0.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/stax-api-1.0.1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/xmlbeans-2.3.0.jar"/>
+	<classpathentry kind="lib" path="C:/is414/lib/lucene-core-3.5.0.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>
