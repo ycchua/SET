@@ -18,9 +18,9 @@ import org.apache.lucene.document.DateTools;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.MultiReader;
-import org.apache.lucene.queryParser.MultiFieldQueryParser;
-import org.apache.lucene.queryParser.ParseException;
-import org.apache.lucene.queryParser.QueryParser;
+import org.apache.lucene.queryparser.classic.MultiFieldQueryParser;
+import org.apache.lucene.queryparser.classic.ParseException;
+import org.apache.lucene.queryparser.classic.QueryParser;
 import org.apache.lucene.search.BooleanClause;
 import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.IndexSearcher;
@@ -30,6 +30,7 @@ import org.apache.lucene.search.TermRangeQuery;
 import org.apache.lucene.search.TopDocs;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
+import org.apache.lucene.util.BytesRef;
 import org.apache.lucene.util.Version;
 
 public class SearchServlet extends HttpServlet {
@@ -55,7 +56,7 @@ public class SearchServlet extends HttpServlet {
 	    
 	    // Create a Index searcher for indexes
 	    IndexSearcher searcher = new IndexSearcher(reader);
-	    Analyzer analyzer = new StandardAnalyzer(Version.LUCENE_35);
+	    Analyzer analyzer = new StandardAnalyzer(Version.LUCENE_48);
 	    
 	 // Create a boolean query for the search
 	    BooleanQuery queryBoolean = new BooleanQuery();
@@ -87,12 +88,12 @@ public class SearchServlet extends HttpServlet {
 		    	dateString2 = DateTools.timeToString(date.getTime(), DateTools.Resolution.MINUTE);
 		    }
 		    
-		    TermRangeQuery Rangequery = new TermRangeQuery("lastModifiedDate" ,dateString2, dateString1, true, true);
+		    TermRangeQuery Rangequery = new TermRangeQuery("lastModifiedDate" ,new BytesRef(dateString2), new BytesRef(dateString1), true, true);
 		    queryBoolean.add(Rangequery, BooleanClause.Occur.MUST);
 	    }
 	     
 	    try {
-		    QueryParser parser = new QueryParser(Version.LUCENE_35, "body", analyzer);
+		    QueryParser parser = new QueryParser(Version.LUCENE_48, "body", analyzer);
 		    if (queryBoolean != null && queryBoolean.toString() != "") {
 		    	queryString += " " + queryBoolean.toString();	
 		    }
@@ -126,7 +127,8 @@ public class SearchServlet extends HttpServlet {
 		            list.add((i+1) + ". " + path); //NEED SCORE??+ " score="+docArray[i].score);
 		    	}
 		    }
-		    searcher.close();
+		    
+		    //searcher.close();
 		    response.sendRedirect("results.jsp");
 	    } catch (ParseException e) {
 	    	e.printStackTrace();

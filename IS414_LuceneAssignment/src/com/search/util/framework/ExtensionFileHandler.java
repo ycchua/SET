@@ -3,7 +3,6 @@ package com.search.util.framework;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.util.Properties;
 
 import org.apache.lucene.document.DateTools;

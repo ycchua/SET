@@ -7,7 +7,7 @@ import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
 import org.apache.lucene.analysis.Analyzer;
-import org.apache.lucene.analysis.SimpleAnalyzer;
+import org.apache.lucene.analysis.core.SimpleAnalyzer;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.util.Version;
 
@@ -75,7 +75,7 @@ public class FileIndexer {
 
 		// Create a new Index Writer Config object
 		IndexWriterConfig writerConfig = new IndexWriterConfig(
-				Version.LUCENE_35, new SimpleAnalyzer(Version.LUCENE_35));
+				Version.LUCENE_48, new SimpleAnalyzer(Version.LUCENE_48));
 		// Create a new Directory object which allows access to the lucene index
 		// (read/write)
 		Directory dir = FSDirectory.open(INDEX_DIR);

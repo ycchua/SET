@@ -1,7 +1,7 @@
 <html>
   <head>
-    <meta name="Author" content="Kelvin Tan">
-    <title>Lucene Query Constructor Demo and Introduction</title>
+    <meta name="Author" content="Melvrick Goh">
+    <title>Lucene Query Constructor Assignment</title>
     <script type="text/javascript" src="luceneQueryConstructor.js"></script>
     <script type="text/javascript" src="../queryValidator/luceneQueryValidator.js"></script>
     <script>
@@ -98,13 +98,17 @@
       </tr>
       <tr>      
       
+      <!-- SEARCH BUTTON -->
       <input type="hidden" name="query">
       <tr><td>&nbsp;</tr>
-      <tr><th><!-- <p>Current Query:</th><td><pre id="curQuery" name="curQuery"></pre><pre id="curQueryValid"></pre> --></td><td>
+      <tr><th><p>Current Query:</th><td><pre id="curQuery" name="curQuery"></pre><pre id="curQueryValid"></pre></td><td>
       
       <input type="button" name="Update" value="Search" onClick="doSubmitForm(this.form, true);" />
       <!--<input type="button" name="Validate" value="Validate" onClick="doCheckLuceneQuery(this.form.query); getElementById('curQueryValid').innerHTML = 'Query is valid'" />      
-      --></td>      
+      --></td>
+      
+      
+            
     </table>
     </form>
   </body>
